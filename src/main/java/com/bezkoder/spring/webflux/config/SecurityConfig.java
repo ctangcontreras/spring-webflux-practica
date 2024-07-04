@@ -34,7 +34,9 @@ public class SecurityConfig {
         return http
                 .authorizeExchange()
                 .pathMatchers("/auth/login", "/auth/signup","**/cliente/getInfo/**").permitAll()
-                .pathMatchers("/v3/api-docs/**", 
+                .pathMatchers("/v3/api-docs/**",
+                "/empleado/getEmpleados", 
+                "/empleado**", 
                 "/swagger-resources/configuration/ui",
                 "/swagger-doc/v3/api-docs/swagger-config",
                 "/swagger-doc/v3/api-docs",
