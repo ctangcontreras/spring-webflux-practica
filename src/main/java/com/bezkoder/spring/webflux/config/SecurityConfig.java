@@ -33,10 +33,7 @@ public class SecurityConfig {
 
         return http
                 .authorizeExchange()
-                .pathMatchers("/auth/login", "/auth/signup","**/cliente/getInfo/**").permitAll()
-                .pathMatchers("/v3/api-docs/**",
-                "/empleado/getEmpleados", 
-                "/empleado**", 
+                .pathMatchers("/auth/login", "/auth/signup","**/cliente/getInfo/**","/v3/api-docs/**",
                 "/swagger-resources/configuration/ui",
                 "/swagger-doc/v3/api-docs/swagger-config",
                 "/swagger-doc/v3/api-docs",
@@ -61,6 +58,7 @@ public class SecurityConfig {
                 .formLogin().disable()
                 .httpBasic().disable()
                 .csrf().disable()
+                .cors().disable()
                 .logout().disable()
                 .build();
     }
