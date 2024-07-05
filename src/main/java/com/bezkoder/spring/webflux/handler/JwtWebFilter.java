@@ -52,7 +52,7 @@ public class JwtWebFilter implements WebFilter {
         return chain.filter(exchange);
     }
 
-        if (path.contains("/auth/login") || path.contains("/auth/signout")) return chain.filter(exchange);
+        if (path.contains("/auth/login") || path.contains("/auth/signout") || path.contains("/empleado") ) return chain.filter(exchange);
 
  
 

@@ -13,9 +13,7 @@ import org.springframework.web.reactive.config.EnableWebFlux;
 import io.r2dbc.spi.ConnectionFactory;
 
 @EnableWebFlux
-//@EnableR2dbcRepositories
 @SpringBootApplication
-@ComponentScan(basePackages = "com.bezkoder.spring.webflux")
 public class SpringBootWebfluxExampleApplication {
 
 

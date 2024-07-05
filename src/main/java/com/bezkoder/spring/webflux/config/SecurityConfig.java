@@ -2,7 +2,7 @@ package com.bezkoder.spring.webflux.config;
 
 
  
-import org.springframework.context.annotation.Bean;
+impoimport org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.web.server.SecurityWebFilterChain;
 
@@ -34,6 +34,7 @@ public class SecurityConfig {
         return http
                 .authorizeExchange()
                 .pathMatchers("/auth/login", "/auth/signup","**/cliente/getInfo/**","/v3/api-docs/**",
+                "/empleado/**", "/empleados/**",
                 "/swagger-resources/configuration/ui",
                 "/swagger-doc/v3/api-docs/swagger-config",
                 "/swagger-doc/v3/api-docs",
@@ -63,4 +64,3 @@ public class SecurityConfig {
                 .build();
     }
     
-}
