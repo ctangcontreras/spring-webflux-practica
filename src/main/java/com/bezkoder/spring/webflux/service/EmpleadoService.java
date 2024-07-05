@@ -31,6 +31,7 @@ public class EmpleadoService {
                     dto.setEdad(e.getEdad());
                     dto.setEstado(e.getEstado());
                     dto.setFechaNacimiento(e.getFechaNacimiento());
+                    dto.setSalario(e.getSalario());
                     return dto;
                 });
     }
@@ -47,6 +48,7 @@ public class EmpleadoService {
                     dto.setEdad(e.getEdad());
                     dto.setEstado(e.getEstado());
                     dto.setFechaNacimiento(e.getFechaNacimiento());
+                    dto.setSalario(e.getSalario());
                     return dto;
                 });
     }
@@ -71,6 +73,8 @@ public class EmpleadoService {
         empleado.setFechaCreacion(LocalDate.now());
         empleado.setUsuarioCreacion(empleadoDto.getIdUsuario());
         empleado.setFechaNacimiento(empleadoDto.getFechaNacimiento());
+        empleado.setSalario(empleadoDto.getSalario());
+
         return empleadoRepository.save(empleado);
     }
 
@@ -85,6 +89,7 @@ public class EmpleadoService {
                     empleado.setFechaModifica(LocalDate.now());
                     empleado.setUsuarioModifica(empleadoDto.getIdUsuario());
                     empleado.setFechaNacimiento(empleadoDto.getFechaNacimiento());
+                    empleado.setSalario(empleadoDto.getSalario());
                     return empleadoRepository.save(empleado);
                 });
     }

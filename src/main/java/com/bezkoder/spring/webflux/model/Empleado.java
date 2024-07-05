@@ -1,6 +1,6 @@
 package com.bezkoder.spring.webflux.model;
 
-import java.sql.Timestamp;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 import org.springframework.data.annotation.Id;
@@ -26,6 +26,9 @@ public class Empleado {
 
     @Column("NOMBRE")
     private String nombres;
+
+    @Column("SALARIO")
+    private BigDecimal salario;
 
     @Column("APELLIDO_PATERNO")
     private String apellidoPaterno; 

@@ -1,5 +1,6 @@
 package com.bezkoder.spring.webflux.dto;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 
@@ -13,7 +14,7 @@ public class EmpleadoOutDto {
     private Integer edad;
     private LocalDate fechaNacimiento;
     private String estado;
-
+    private BigDecimal salario;
     public EmpleadoOutDto() {
     }
 
@@ -61,6 +62,14 @@ public class EmpleadoOutDto {
         return fechaNacimiento;
     }
 
+    public BigDecimal getSalario() {
+        return salario;
+    }
+
+    public void setSalario(BigDecimal salario) {
+        this.salario = salario;
+    }
+
     public void setFechaNacimiento(LocalDate fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
@@ -72,5 +81,6 @@ public class EmpleadoOutDto {
     public void setEstado(String estado) {
         this.estado = estado;
     }
-   
+
+    
 }

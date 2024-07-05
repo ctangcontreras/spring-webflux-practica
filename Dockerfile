@@ -1,5 +1,5 @@
-FROM openjdk:11
-MAINTAINER jchaupez-dev
+FROM openjdk:17
+MAINTAINER ctang-dev
 ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} DESAFIO-CLIENTE-1.0.jar
-ENTRYPOINT ["java","-jar","/DESAFIO-CLIENTE-1.0.jar"]
+COPY ${JAR_FILE} api-empleado-1.0.jar
+ENTRYPOINT ["java","-jar","/api-empleado-1.0.jar"]
