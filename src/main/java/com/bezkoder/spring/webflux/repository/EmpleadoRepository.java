@@ -11,6 +11,6 @@ import reactor.core.publisher.Flux;
 @Repository
 public interface EmpleadoRepository extends R2dbcRepository<Empleado, Integer> {
     
-    @Query("SELECT * FROM Empleado WHERE estado = 1")
+    @Query("SELECT * FROM Empleado e WHERE estado = 1")
     Flux<Empleado> listarEmpleadosActivos();
 }
