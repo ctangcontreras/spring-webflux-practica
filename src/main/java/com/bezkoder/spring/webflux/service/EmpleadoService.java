@@ -21,7 +21,7 @@ public class EmpleadoService {
     EmpleadoRepository empleadoRepository;    
 
     public Flux<EmpleadoOutDto> listarEmpleados() {
-        return empleadoRepository.findAll()
+        return empleadoRepository.listarEmpleadosActivos()
                 .map(e -> {
                     EmpleadoOutDto dto = new EmpleadoOutDto();
                     dto.setIdEmpleado(e.getIdEmpleado());
